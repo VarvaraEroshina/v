@@ -387,7 +387,7 @@ body {
   }
   .service-card img {
     width: 80%;
-    height: 200px;
+    height: 360px;
   }
   .reviews {
     padding: 40px 5%;
@@ -467,7 +467,7 @@ body {
   }
   .service-card img {
     width: 80%;
-    height: 280px;
+    height: 360px;
   }
   .carousel-wrapper {
     max-width: 80%;
@@ -478,4 +478,5 @@ body {
   .contact-links {
     gap: 15px;
   }
+
 }
