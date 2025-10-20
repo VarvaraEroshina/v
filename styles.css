@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --pink: #f4d9e0;
   --black: #0e0e0e;
   --white: #ffffff;
@@ -132,7 +132,7 @@ body {
 }
 .service-card img {
   width: 80%;
-  height: 360px;
+  height: 400px; /* Изменено на 400px для всех устройств */
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 12px;
@@ -170,7 +170,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 700px; /* Увеличено для учета пространства под кнопки */
+  max-width: 700px;
   margin: 0 auto;
 }
 .carousel-container {
@@ -387,7 +387,7 @@ body {
   }
   .service-card img {
     width: 80%;
-    height: 360px;
+    height: 400px; /* Изменено на 400px для мобильных */
   }
   .reviews {
     padding: 40px 5%;
@@ -444,11 +444,11 @@ body {
 
 @media (min-width: 769px) {
   .service-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2x2 раскладка */
+    grid-template-columns: repeat(2, 1fr);
   }
   .service-card img {
     width: 80%;
-    height: 360px;
+    height: 400px; /* Изменено на 400px для десктопов */
   }
 }
 
@@ -467,7 +467,7 @@ body {
   }
   .service-card img {
     width: 80%;
-    height: 460px;
+    height: 400px; /* Изменено на 400px для планшетов */
   }
   .carousel-wrapper {
     max-width: 80%;
@@ -478,6 +478,4 @@ body {
   .contact-links {
     gap: 15px;
   }
-
 }
-
