@@ -1,0 +1,180 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Varya Eroshina — Brow & Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Варвара Ерошина</h1>
+      <p class="subtitle">Brow & Beauty Master — Самара</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn primary" id="openBooking">Записаться</a>
+        <a href="https://t.me/vrvrrrE" class="btn outline">Консультация</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="1.jpg" alt="Varya Eroshina">
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>Обо мне</h2>
+    <p>Я - сертифицированный мастер бровист с опытом более 1,5 лет! Создаю аккуратные, естественные брови и подчеркиваю индивидуальную красоту каждой девушки. В работе уделяю внимание деталям, эстетике и комфорту клиента.</p>
+  </section>
+
+  <section class="services">
+    <h2>Услуги и стоимость</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="4.jpg" alt="Долговременная укладка — complex">
+        <h3>Долговременная укладка — complex</h3>
+        <p>Коррекция, окрашивание, прореживание, уход. Ламинирование, коррекция воск/пинцет, прореживание внутри брови, окрашивание, уход.</p>
+        <div class="price">1400 ₽</div>
+      </div>
+      <div class="service-card">
+        <img src="5.jpg" alt="Natural brows">
+        <h3>Natural brows</h3>
+        <p>Коррекция, окрашивание, прореживание, уход. Лёгкое осветление, коррекция воск/пинцет, прореживание внутри брови, окрашивание, уход.</p>
+        <div class="price">1200 ₽</div>
+      </div>
+      <div class="service-card">
+        <img src="2.jpg" alt="Оформление бровей">
+        <h3>Оформление бровей</h3>
+        <p>Коррекция, окрашивание, прореживание, уход. Коррекция воск/пинцет, окрашивание натурально/графика, уход.</p>
+        <div class="price">1000 ₽</div>
+      </div>
+      <div class="service-card">
+        <img src="3.jpg" alt="Коррекция бровей">
+        <h3>Коррекция бровей</h3>
+        <p>Коррекция, прореживание, уход. Ламинирование, коррекция воск/пинцет, прореживание внутри брови, окрашивание, уход.</p>
+        <div class="price">700 ₽</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2>Отзывы</h2>
+    <div class="carousel-wrapper">
+      <button class="prev">‹</button>
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="otzyv3.png" alt="Отзыв 1">
+          <img src="otzyv2.png" alt="Отзыв 2">
+          <img src="otzyv1.png" alt="Отзыв 3">
+          <img src="otzyv4.png" alt="Отзыв 4">
+          <img src="otzyv5.png" alt="Отзыв 5">
+        </div>
+      </div>
+      <button class="next">›</button>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Хочешь идеальные брови?</h2>
+    <p>Запишись прямо сейчас или напиши для консультации — помогу подобрать идеальный формат ухода и форму бровей.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn primary" id="openBooking2">Записаться</a>
+      <a href="https://t.me/vrvrrrE" class="btn outline">Консультация</a>
+    </div>
+  </section>
+
+  <div class="contacts">
+    <h2>КОНТАКТЫ</h2>
+    <div class="contact-links">
+      <a href="https://t.me/vrvrrrE" target="_blank">
+        <i class="fab fa-telegram-plane"></i>
+        <span class="contact-label">Telegram</span>
+      </a>
+      <a href="https://instagram.com/_vrvrrr_" target="_blank">
+        <i class="fab fa-instagram"></i>
+        <span class="contact-label">Instagram</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Записаться на процедуру</h2>
+      <p>Выберите адрес для записи:</p>
+      <div class="modal-buttons">
+        <a href="https://dikidi.net/1914362" class="modal-btn" data-url="https://dikidi.net/1914362">Санфирова 95к2</a>
+        <a href="https://dikidi.net/1685960" class="modal-btn" data-url="https://dikidi.net/1685960">Красная Глинка</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Модальное окно
+    const modal = document.getElementById("bookingModal");
+    const openBtns = [document.getElementById("openBooking"), document.getElementById("openBooking2")];
+    const closeBtn = modal.querySelector(".close");
+    const modalButtons = modal.querySelectorAll(".modal-btn");
+
+    openBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.style.display = "flex";
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target == modal) modal.style.display = "none";
+    });
+
+    modalButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const url = btn.getAttribute("data-url");
+        window.open(url, "_blank");
+        modal.style.display = "none";
+      });
+    });
+
+    // Карусель для отзывов
+    const carousel = document.querySelector('.carousel');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    if (carousel && prev && next) {
+      let index = 0;
+      const slides = carousel.querySelectorAll('img');
+      const total = slides.length;
+      next.addEventListener('click', () => {
+        index = (index + 1) % total;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      });
+      prev.addEventListener('click', () => {
+        index = (index - 1 + total) % total;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      });
+    }
+
+    // Анимация появления секций при скролле
+    const sections = document.querySelectorAll('header, section, .contacts, footer');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      section.classList.add('fade-in');
+      observer.observe(section);
+    });
+  </script>
+</body>
+<footer class="footer">
+  <p>© 2025 Варвара Ерошина. Все права защищены.</p>
+</footer>
+</html>
